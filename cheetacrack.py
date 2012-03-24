@@ -17,6 +17,7 @@ def stampa():
 	print "*     Cheetacrack python script                 *"
 	print "*     for Pirelli routers                       *"
 	print "*     by spasto.net team                        *"
+	print "*                                               *"
 	print "*************************************************"
 	print ""
 	print "usage: python cheetacrack.py <mac_addres> <file_input> "
