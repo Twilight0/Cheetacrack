@@ -55,11 +55,11 @@ if(len(sys.argv)>2):
 	ris=mac6-base
 	ris=ris/inc
 	ris=str(ris)
-	print "*************************************"
-	print "* Code found:                       *"
-	print "* MAC =",mac_addr,"                 *"
-	print "* WPA = ",sn1+'Y00'+ris,"           *"
-	print "*                                   *"
-	print "*************************************"
+	print "*********************************"
+	print "* Key found:			*"
+	print "* MAC =",mac_addr,"	*"
+	print "* WPA =",sn1+'Y00'+ris,"		*"
+	print "*				*"
+	print "*********************************"
 else:
 	stampa()
