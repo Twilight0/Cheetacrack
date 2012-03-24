@@ -16,7 +16,7 @@ def stampa():
 	print "*                                               *" 
 	print "*     Cheetacrack python script                 *"
 	print "*     for Pirelli routers                       *"
-	print "*                                               *"
+	print "*     by spasto.net team                        *"
 	print "*************************************************"
 	print ""
 	print "usage: python cheetacrack.py <mac_addres> <file_input> "
@@ -55,9 +55,9 @@ if(len(sys.argv)>2):
 	ris=ris/inc
 	ris=str(ris)
 	print "*************************************"
-	print "*      by spastonet team            *"
-	print "* MAC =",mac_addr,    "             *"
-	print "* WPA = ",sn1+'Y00'+ris,  "         *"
+	print "* Code found:                       *"
+	print "* MAC =",mac_addr,"                 *"
+	print "* WPA = ",sn1+'Y00'+ris,"           *"
 	print "*                                   *"
 	print "*************************************"
 else:
