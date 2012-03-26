@@ -1,7 +1,7 @@
 Cheetacrack is a small python script for the purpose of recovering
-WPA passwords for Pirelli wifi modem/routers.
+factory WPA/WPA2 keys from Pirelli wifi modem/routers.
 
-It is an open-source project and its released under the GPL terms.
+It is a free and open source project, released under the GPL terms.
 For further details please read LICENCE.
 
 To run this script you need to have python libraries installed.
