@@ -27,7 +27,7 @@ def stampa():
 
 if(len(sys.argv)>2):
 	mac_addr=sys.argv[1] 	#mac 
-	fin=sys.argv[2]	#base.lst	
+	fin=sys.argv[2]	#bases.lst	
 	wmac=mac_addr[:8] 
 	mac6=mac_addr[9:17]
 	try:
