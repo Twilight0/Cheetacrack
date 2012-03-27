@@ -26,9 +26,9 @@ def stampa():
 	print ""
 
 if(len(sys.argv)>2):
-	mac_addr=sys.argv[1]
-	fin=sys.argv[2]
-	wmac=mac_addr[:8]
+	mac_addr=sys.argv[1] 	#mac 
+	fin=sys.argv[2]	#base.lst	
+	wmac=mac_addr[:8] 
 	mac6=mac_addr[9:17]
 	try:
 		for riga in fileinput.input(fin):
@@ -55,10 +55,19 @@ if(len(sys.argv)>2):
 	ris=mac6-base
 	ris=ris/inc
 	ris=str(ris)
+	
+	cc=len(ris)	
+	zeros=(7-cc)
+
+	i=0
+	while (i<zeros): 
+		ris="0"+ris
+		i=i+1
+			
 	print "*********************************"
 	print "* Key found:			*"
 	print "* MAC =",mac_addr,"	*"
-	print "* WPA =",sn1+'Y00'+ris,"		*"
+	print "* WPA =",sn1+'Y'+ris,"		*"
 	print "*				*"
 	print "*********************************"
 else:
