@@ -35,9 +35,9 @@ if(len(sys.argv)>2):
 			da=riga[9:17]
 			a=riga[18:26]
 			if((riga[:8]==wmac) and (da<mac6<a)):	
-				sn1=riga[27:32]
-				base=riga[33:39]
-				inc=riga[40]
+				sn1=riga[27:33]
+				base=riga[34:40]
+				inc=riga[41]
 				esito=bool(1)
 				break
 			else:
@@ -48,7 +48,8 @@ if(len(sys.argv)>2):
 	if(not(esito)):	
 		print "Mac is not on the list"
 		sys.exit()
-	mac6=mac6.replace(':','') 
+	mac6=mac6.replace(':','')
+	sn1=sn1.replace(' ','')  
 	mac6=int(mac6,16)
 	base=int(base,16)
 	inc=int(inc)
@@ -67,7 +68,7 @@ if(len(sys.argv)>2):
 	print "*********************************"
 	print "* Key found:			*"
 	print "* MAC =",mac_addr,"	*"
-	print "* WPA =",sn1+'Y'+ris,"		*"
+	print "* WPA =",sn1+""+ris,"		*"
 	print "*				*"
 	print "*********************************"
 else:
