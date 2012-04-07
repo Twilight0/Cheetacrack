@@ -6,10 +6,23 @@ For further details please read LICENCE.
 
 To run this script you need to have python libraries installed.
 
-Usage:
+Make the shell script first executable:
 
-python cheetacrack.py <mac_address> <file_input>
+chmod +x ./cheetacrack
+
+Then, run it:
+
+./cheetacrack <mac_address>
 
 Example:
 
-python cheetacrack.py 38:22:9D:A3:00:00 bases.lst
+./cheetacrack 38:22:9D:A3:00:00
+
+Alternativelly you may call the python script directly and with
+a different file input for "bases":
+
+python ./cheetacrack.py <mac_address> <file_input>
+
+Example:
+
+python ./cheetacrack.py 38:22:9D:A3:00:00 bases.lst
