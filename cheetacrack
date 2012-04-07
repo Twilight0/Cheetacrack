@@ -1,0 +1,2 @@
+#!/bin/sh
+python2 ./cheetacrack.py $1 bases.lst
