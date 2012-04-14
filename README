@@ -6,6 +6,9 @@ For further details please read LICENCE.
 
 To run this script you need to have python libraries installed.
 
+Note: It is compatible with Backtrack 5+ and other modern Linux
+distributions.
+
 Make the shell script first executable:
 
 chmod +x ./cheetacrack
