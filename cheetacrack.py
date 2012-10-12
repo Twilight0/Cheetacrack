@@ -49,9 +49,13 @@ if(len(sys.argv)>2):
 				ris=testimacl6-base
 				ris=ris/inc
 				ris=str(ris)
-				cc=len(ris)	
+				cc=len(ris)
 				zeros=(7-cc)
-				ris="0"+ris
+				i=0
+				while(i<zeros):	
+					ris="0"+ris
+					i=i+1
+				
 				print "*********************************"
 				print "* Key found:			*"
 				print "* MAC =",mac_addr,"	*"
