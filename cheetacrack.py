@@ -16,7 +16,6 @@ def stampa():
 	print "*                                               *" 
 	print "*     Cheetacrack python script                 *"
 	print "*     for Pirelli routers                       *"
-	print "*     by spasto.net team                        *"
 	print "*                                               *"
 	print "*************************************************"
 	print ""
