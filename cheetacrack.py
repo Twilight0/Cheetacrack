@@ -22,7 +22,6 @@ def stampa():
 	print "usage: python cheetacrack.py <mac_addres> <file_input> "
 	print ""
 	print "Example: python cheetacrack.py 38:22:9D:A3:00:00 bases.lst"
-	print ""
 
 if(len(sys.argv)>2):
 	mac_addr=sys.argv[1] 	
